@@ -43,6 +43,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+}
+
+#desktop-nav {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
   backdrop-filter: blur(10px);
 }
@@ -57,8 +60,22 @@ nav {
   gap: 4rem;
   list-style: none;
   font-size: 1.5rem;
+  display: flex;
+  color: teal;
 }
 
+.nav-links2 a {
+  color: teal;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+.nav-links2 a:hover {
+  color: lightblue;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
 
 a {
   color: black;
@@ -280,12 +297,12 @@ section {
 
 #about {
   position: relative;
+  margin-top: 4rem;
 }
 
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .about-details-container {
@@ -329,18 +346,24 @@ section {
   cursor: default;
 }
 
+.text-container p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: rgba(0, 0, 0);
+}
+
 
 /* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
+  margin-top: 4rem;
 }
 
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 .experience-details-container {
@@ -348,34 +371,42 @@ section {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
 }
 
 .article-container {
   display: flex;
-  align-items: left;
-  text-align: left;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 1.5rem;
-  justify-content: left;
+  justify-content: center;
+  margin: 0;
 }
 
 article {
   display: flex;
   width: 10rem;
   align-items: left;
-  justify-content: space-around;
-  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+article div {
+  text-align: center;
+  flex: 1;
+  margin-top: 2rem;
 }
 
 article .icon {
   cursor: default;
+  margin-left: 0;
+  margin-top: 2rem;
 }
 
 /* PROJECTS SECTION */
 
 #projects {
   position: relative;
+  margin-top: -6rem;
 }
 
 .color-container {
@@ -384,19 +415,21 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  border-radius: 4rem;
+  width: 100%;
+  height: 100%;
 }
 
 .project-title {
   margin: 1rem;
   color: black;
+  font-size: 20px;
 }
 
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+  width: 20rem;
 }
 
 /* CONTACT */
@@ -444,8 +477,12 @@ article .icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer p {
   text-align: center;
+  color: teal;
 }
