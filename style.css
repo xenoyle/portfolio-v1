@@ -19,7 +19,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: black;
 }
 
 
@@ -52,12 +52,18 @@ nav {
   top: 0;
   width: 100%;
   z-index: 1000; /* Ensure it stays above other content */
+  transition: height 0.1s ease;
 }
 
 .nav-links {
   gap: 4rem;
   list-style: none;
   font-size: 1.5rem;
+}
+
+.nav-links a:hover {
+  font-size: larger;
+  text-underline-offset: 0.5rem;
 }
 
 .nav-links2 {
@@ -77,8 +83,9 @@ nav {
 .nav-links2 a:hover {
   color: lightblue;
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.5rem;
   text-decoration-color: rgb(181, 181, 181);
+  font-size: larger;
 }
 
 a {
@@ -88,9 +95,9 @@ a {
 }
 
 a:hover {
-  color: grey;
+  color: rgb(110, 110, 110);
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.5rem;
   text-decoration-color: rgb(181, 181, 181);
 }
 
@@ -289,7 +296,7 @@ section {
   color: white;
 }
 
-.btn-color-1:hover {
+.btn-color-1:hover, .btn-color-2:hover {
   background: rgb(0, 0, 0);
 }
 
@@ -299,6 +306,7 @@ section {
 
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
+  background: rgb(0, 0, 0);
 }
 
 .btn-container {
@@ -376,22 +384,22 @@ section {
 }
 
 
-/* EXPERIENCE SECTION */
+/* SKILLS SECTION */
 
-#experience {
+#skills {
   position: relative;
   margin-top: 4rem;
   padding-top: 17vh;
   margin-top: 0;
 }
 
-.experience-sub-title {
+.skills-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.5rem;
 }
 
-.experience-details-container {
+.skills-details-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -448,7 +456,7 @@ article .icon {
 .project-img {
   border-radius: 4rem;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .project-title {
@@ -473,6 +481,7 @@ article .icon {
   padding-top: 17vh;
   margin-top: 0;
 }
+
 
 .contact-info-upper-container {
   display: flex;

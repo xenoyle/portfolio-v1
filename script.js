@@ -22,7 +22,7 @@ function smoothScroll(target, duration) {
   var targetPosition = target.getBoundingClientRect().top;
   var startPosition = window.pageYOffset;
   var headerOffset = document.querySelector('#desktop-nav').offsetHeight;
-  var additionalOffset = -40; // Adjust this value as needed
+  var additionalOffset = -100; // Adjust this value as needed
   var distance = targetPosition - headerOffset - additionalOffset;
   var startTime = null;
 
@@ -60,5 +60,24 @@ window.addEventListener('load', function() {
     setTimeout(function() {
       smoothScroll(window.location.hash, 1);
     }, 0);
+  }
+});
+
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('#desktop-nav');
+  
+  // Calculate how far the user has scrolled
+  const scrollTop = window.scrollY;
+
+  const originalHeight = 124; // Initial height
+  
+  // Adjust the height and font size based on scroll position
+  const newHeight = Math.max(60, 100 - scrollTop / 10); // Minimum height of 60px
+  
+  // Apply the new styles
+  nav.style.height = newHeight + 'px';
+
+  if (scrollTop === 0) {
+    nav.style.height = originalHeight + 'px';
   }
 });
